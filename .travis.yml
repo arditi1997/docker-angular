@@ -27,10 +27,10 @@ script:
 deploy:
     provider: elasticbeanstalk
     region: 'us-east-1'
-    app: 'Ecommerce'
-    env: 'Ecommerce-env'
+    app: 'Docker-angular'
+    env: 'Dockerangular-env'
     bucket_name: 'elasticbeanstalk-us-west-1-300168838125'
-    bucket_path: 'Ecommerce'
+    bucket_path: 'Docker-angular'
     on:
       branch: master
     access_key_id: $AWS_ACCESS_KEY
