@@ -1,0 +1,14 @@
+version: '3'
+services:
+ docker:
+    image: docker-angular
+    container_name: docker-angular
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    command: ['npm', 'run', 'start']
+    ports:
+      - "8080:8080"
+
+
