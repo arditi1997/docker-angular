@@ -1,8 +1,8 @@
 version: '3'
 services:
  docker:
-    image: docker-angular
-    container_name: docker-angular
+    image: docker-angular1
+    container_name: docker-angular1
     build:
       context: .
       dockerfile: Dockerfile

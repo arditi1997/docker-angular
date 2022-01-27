@@ -10,7 +10,7 @@ cache:
     - ./node_modules
 
 before_install:
- - docker build -t docker-angular .
+ - docker build -t docker-angular1 .
 
 before_script:
  - nvm install 14
@@ -22,15 +22,15 @@ before_script:
  - ng version
 
 script:
- - docker run -e CI=true docker-angular npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+ - docker run -e CI=true docker-angular1 npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
 
 deploy:
     provider: elasticbeanstalk
     region: 'us-east-1'
-    app: 'Docker-angular'
+    app: 'docker-angular1'
     env: 'Dockerangular-env'
     bucket_name: 'elasticbeanstalk-us-west-1-300168838125'
-    bucket_path: 'Docker-angular'
+    bucket_path: 'docker-angular1'
     on:
       branch: master
     access_key_id: $AWS_ACCESS_KEY
